@@ -1,5 +1,22 @@
 {
   "sections": {
+    "hero_slick_slider": {
+      "type": "hero-slick-slider",
+      "blocks": {
+        "hero-slick-heading": {
+          "type": "hero-slick-heading",
+          "settings": {
+            "hero-slick-heading": "Talk about your brand"
+          }
+        }
+      },
+      "block_order": [
+        "hero-slick-heading"
+      ],
+      "settings": {
+        "desktop_text_box_position": "flex-end"
+      }
+    },
     "image_banner": {
       "type": "image-banner",
       "blocks": {
@@ -109,6 +126,7 @@
     }
   },
   "order": [
+    "hero_slick_slider",
     "image_banner",
     "rich_text",
     "featured_products",
