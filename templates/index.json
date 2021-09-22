@@ -3,15 +3,16 @@
     "hero_slick_slider": {
       "type": "hero-slick-slider",
       "blocks": {
-        "hero-slick-heading": {
-          "type": "hero-slick-heading",
+        "hero-slick-slider": {
+          "type": "hero-slick-slider",
           "settings": {
-            "hero-slick-heading": "Talk about your brand"
+            "hero-slick-slide-placeholder-txt": "Decor",
+            "hero-slick-slide-title": "Talk to your Brand"
           }
         }
       },
       "block_order": [
-        "hero-slick-heading"
+        "hero-slick-slider"
       ],
       "settings": {
         "desktop_text_box_position": "flex-end"

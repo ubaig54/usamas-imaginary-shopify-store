@@ -1,34 +1,86 @@
-<h1>{{ section.settings.hero-slick-slider }}</h1>
+<!-- {% for block in section.blocks %}
+    {% if block.settings.hero-slick-slider %}
+        <img src={{ block.settings.hero-slick-slide | img_url: 'master' }} alt="" />
+    {% else %}
+        {{ 'product-1' | placeholder_svg_tag }}
+    {% endif %}
 
-{% for block in section.blocks %}
-    <h2>{{ block.settings.hero-slick-heading }}</h2>
-{% endfor %}
+    {{ block.settings.hero-slick-slide-title }}
+
+{% endfor %} -->
+
+<div class="hero-slider">
+    <div class="hero-slide">
+        <div class="in-hero-slide">
+            <img src="https://cdn.shopify.com/s/files/1/0132/3116/1408/files/banner-carousel-1_1170x.jpg?v=1545719362"
+                alt="" />
+            <div class="slide-txt">
+                <div class="in-slide-txt">
+                    <div class="slide-pre-heading">Accessories</div>
+                    <div class="slide-title">
+                        <h2>Talk to your Brand</h2>
+                    </div>
+                    <div class="slide-btn">
+                        <a href="#">Shop now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="hero-slide">
+        <div class="in-hero-slide">
+            <img src="https://cdn.shopify.com/s/files/1/0132/3116/1408/files/banner-carousel-1_1170x.jpg?v=1545719362"
+                alt="" />
+            <div class="slide-txt">
+                <div class="in-slide-txt">
+                    <div class="slide-pre-heading">Accessories</div>
+                    <div class="slide-title">
+                        <h2>Talk to your Brand</h2>
+                    </div>
+                    <div class="slide-btn">
+                        <a href="#">Shop now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 {% schema %}
 {
-    "name": "Hero Slider",
-    "settings": [
-        {
-            "type": "text",
-            "id": "hero-slick-slider",
-            "label": "Hero Slider",
-            "default": "Howdy!"
-        }
-    ],
-    "blocks": [
-        {
-            "type": "hero-slick-heading",
-            "name": "Heading",
-            "limit": 2,
-            "settings": [
-                {
-                    "type": "text",
-                    "id": "hero-slick-heading",
-                    "label": "Hero Heading",
-                    "default": "Howdy! heading."
-                }
-            ]
-        }
-    ]
+"name": "Slider",
+"blocks": [
+{
+"type": "hero-slick-slider",
+"name": "Slide",
+"settings": [
+{
+"type": "image_picker",
+"id": "hero-slick-slide",
+"label": "Upload image"
+},
+{
+"type": "text",
+"id": "hero-slick-slide-title",
+"label": "Slide Title"
+},
+{
+"type": "text",
+"id": "hero-slick-slide-pre-heading",
+"label": "Slide Pre-Heading"
+},
+{
+"type": "text",
+"id": "hero-slick-slide-btn-label",
+"label": "Button Label"
+},
+{
+"type": "url",
+"id": "hero-slick-slide-btn-url",
+"label": "Button URL"
+}
+]
+}
+]
 }
 {% endschema %}
