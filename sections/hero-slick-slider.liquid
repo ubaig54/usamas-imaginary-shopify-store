@@ -10,40 +10,26 @@
 {% endfor %} -->
 
 <div class="hero-slider">
+    {% for block in section.blocks %}
     <div class="hero-slide">
         <div class="in-hero-slide">
             <img src="https://cdn.shopify.com/s/files/1/0132/3116/1408/files/banner-carousel-1_1170x.jpg?v=1545719362"
                 alt="" />
             <div class="slide-txt">
                 <div class="in-slide-txt">
-                    <div class="slide-pre-heading">Accessories</div>
+                    <div class="slide-pre-heading">{{ block.settings.hero-slick-slide-pre-heading }}</div>
                     <div class="slide-title">
-                        <h2>Talk to your Brand</h2>
+                        <h2>{{ block.settings.hero-slick-slide-title }}</h2>
                     </div>
                     <div class="slide-btn">
-                        <a href="#">Shop now</a>
+                        <a href="{{ block.settings.hero-slick-slide-btn-url }}">{{
+                            block.settings.hero-slick-slide-btn-label }}</a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="hero-slide">
-        <div class="in-hero-slide">
-            <img src="https://cdn.shopify.com/s/files/1/0132/3116/1408/files/banner-carousel-1_1170x.jpg?v=1545719362"
-                alt="" />
-            <div class="slide-txt">
-                <div class="in-slide-txt">
-                    <div class="slide-pre-heading">Accessories</div>
-                    <div class="slide-title">
-                        <h2>Talk to your Brand</h2>
-                    </div>
-                    <div class="slide-btn">
-                        <a href="#">Shop now</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    {% endfor %}
 </div>
 
 {% schema %}

@@ -1,5 +1,18 @@
-.hero-slide {
-    margin: 0 2rem;
+.hero-slider button {
+    position: absolute;
+    top: 42%;
+    background: none;
+    border: none;
+    font-size: 7rem;
+    cursor: pointer;
+}
+
+.hero-slider button:first-of-type {
+    left: 24rem;
+}
+
+.hero-slider button:last-of-type {
+    right: 24rem;
 }
 
 .in-hero-slide {
